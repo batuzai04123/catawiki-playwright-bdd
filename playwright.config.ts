@@ -19,7 +19,8 @@ export default defineConfig({
   reporter: 'html',
   use: {
     baseURL: 'https://www.catawiki.com',
-    trace: 'retain-on-failure',
+    trace: 'on',
+    // trace: 'retain-on-failure',
     screenshot: 'on',
   },
   expect: {
