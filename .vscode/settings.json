@@ -1,0 +1,21 @@
+{
+    "editor.tabCompletion": "on",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": true,
+    "editor.mouseWheelZoom": true,
+    "cucumberautocomplete.syncfeatures": "./features/**/*.feature",
+    "cucumberautocomplete.steps": [
+        "./test-steps/**/*.ts"
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.strictGherkinValidation": true,
+    "cucumberautocomplete.stepsInvariants": false,
+    "cucumberautocomplete.customParameters": [],
+    "[feature]": {
+        "editor.autoClosingQuotes": "never",
+        "editor.autoSurround": "never",
+    },
+}

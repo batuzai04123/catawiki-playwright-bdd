@@ -1,0 +1,39 @@
+{
+  "name": "catawiki-playwright-bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen": "yarn bddgen",
+    "lint": "eslint .",
+    "test": "yarn gen && yarn playwright test",
+    "tags": "yarn gen && yarn playwright test --grep",
+    "report": "yarn exec playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batuzai04123/catawiki-playwright-bdd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/batuzai04123/catawiki-playwright-bdd/issues"
+  },
+  "homepage": "https://github.com/batuzai04123/catawiki-playwright-bdd#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.0"
+  },
+  "dependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/lodash": "^4.17.24",
+    "eslint": "^10.4.0",
+    "lodash": "^4.18.1",
+    "playwright-bdd": "^8.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4"
+  }
+}
