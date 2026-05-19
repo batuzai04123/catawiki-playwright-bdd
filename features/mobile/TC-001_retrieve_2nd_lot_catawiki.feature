@@ -1,5 +1,5 @@
-@TC-001
-Feature: [TC001] Catawiki Search: Retrieve 2nd lot from search results
+@mobile @TC-001
+Feature: [Mobile][TC001] Catawiki Search: Retrieve 2nd lot from search results
 
     As a user, I want to search for keyword "train" on Catawiki and retrieve the 2nd lot from the search results, so that I can view its details.
 

@@ -1,7 +1,7 @@
 import { Page } from '@playwright/test';
 
 export class LotPage {
-  constructor(private page: Page) {}
+  constructor(protected page: Page) {}
 
   get lotTitleSection() {
     return this.page.locator('[data-sentry-component="DesktopLotTitle"]');

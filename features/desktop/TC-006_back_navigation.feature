@@ -1,5 +1,5 @@
-@TC-006
-Feature: [TC006] Catawiki Navigation: Returning to search results from a lot page
+@desktop @TC-006
+Feature: [Desktop][TC006] Catawiki Navigation: Returning to search results from a lot page
 
     As a user, after viewing a lot page I want to be able to navigate back to the search results, so that I can continue browsing other lots.
 

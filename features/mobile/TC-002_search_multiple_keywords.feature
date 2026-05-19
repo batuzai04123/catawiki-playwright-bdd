@@ -1,5 +1,5 @@
-@TC-002
-Feature: [TC002] Catawiki Search: Multiple keyword searches return results
+@mobile @TC-002
+Feature: [Mobile][TC002] Catawiki Search: Multiple keyword searches return results
 
     As a user, I want to verify that common search terms consistently return lots,
     so that the search feature is reliable across different categories.

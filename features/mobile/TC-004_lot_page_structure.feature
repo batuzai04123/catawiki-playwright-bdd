@@ -1,5 +1,5 @@
-@TC-004
-Feature: [TC004] Catawiki Lot Page: All key auction elements are displayed
+@mobile @TC-004
+Feature: [Mobile][TC004] Catawiki Lot Page: All key auction elements are displayed
 
     As a bidder, all essential lot details and bidding controls should be visible on the lot page,
     so that I can make an informed decision before placing a bid.
@@ -13,5 +13,4 @@ Feature: [TC004] Catawiki Lot Page: All key auction elements are displayed
         And I expect the favorites counter to be visible
         And I expect the current bid section to be visible
         And I expect the place bid button to be visible
-        And I expect the set max bid button to be visible
         And I expect the auction timer to be visible

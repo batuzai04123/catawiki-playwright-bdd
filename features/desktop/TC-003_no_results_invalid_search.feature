@@ -1,5 +1,5 @@
-@TC-003
-Feature: [TC003] Catawiki Search: Unrecognized keyword still returns a results page
+@desktop @TC-003
+Feature: [Desktop][TC003] Catawiki Search: Unrecognized keyword still returns a results page
 
     As a user, when I search for a term that has no matching lots,
     I expect Catawiki to still handle the query and is expected to show 'no exact results' messaged and random lots.

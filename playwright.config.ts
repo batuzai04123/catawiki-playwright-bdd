@@ -1,17 +1,27 @@
 import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
-const testDir = defineBddConfig({
-  features: 'features/*.feature',
+const desktopTestDir = defineBddConfig({
+  features: 'features/desktop/*.feature',
   steps: 'test-steps/**/*.ts',
   importTestFrom: 'src/fixture.ts',
+  outputDir: '.features-gen/desktop',
+  disableWarnings: {
+    importTestFrom: true,
+  },
+});
+
+const mobileTestDir = defineBddConfig({
+  features: 'features/mobile/*.feature',
+  steps: 'test-steps/**/*.ts',
+  importTestFrom: 'src/fixture.ts',
+  outputDir: '.features-gen/mobile',
   disableWarnings: {
     importTestFrom: true,
   },
 });
 
 export default defineConfig({
-  testDir,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
@@ -20,7 +30,6 @@ export default defineConfig({
   use: {
     baseURL: 'https://www.catawiki.com',
     trace: 'on',
-    // trace: 'retain-on-failure',
     screenshot: 'on',
   },
   expect: {
@@ -29,11 +38,18 @@ export default defineConfig({
   projects: [
     {
       name: 'Google Chrome',
+      testDir: desktopTestDir,
       use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     },
     {
       name: 'Microsoft Edge',
+      testDir: desktopTestDir,
       use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    },
+    {
+      name: 'Mobile Chrome',
+      testDir: mobileTestDir,
+      use: { ...devices['Pixel 5'], channel: 'chrome' },
     },
   ],
 });

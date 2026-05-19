@@ -1,7 +1,7 @@
 import { Page } from '@playwright/test';
 
 export class HomePage {
-  constructor(private page: Page) { }
+  constructor(protected page: Page) { }
 
   get searchInput() {
     return this.page.locator('[data-testid="search-field"]').first();
@@ -17,6 +17,14 @@ export class HomePage {
 
   get lotCards() {
     return this.lotList.locator('article > a');
+  }
+
+  async fillSearch(keyword: string) {
+    await this.searchInput.fill(keyword);
+  }
+
+  async submitSearch() {
+    await this.searchButton.click();
   }
 
   async selectLot(index: number) {

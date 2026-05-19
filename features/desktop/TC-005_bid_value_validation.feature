@@ -1,5 +1,5 @@
-@TC-005
-Feature: [TC005] Catawiki Lot Page: Current bid is a valid positive number
+@desktop @TC-005
+Feature: [Desktop][TC005] Catawiki Lot Page: Current bid is a valid positive number
 
     As a user, the current bid amount displayed on a lot page should always be a valid positive number, ensuring the auction data is correctly rendered.
 
