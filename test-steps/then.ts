@@ -5,6 +5,11 @@ function escapeRegExp(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+Then("I expect text {string} is displayed", async function (text: string) {
+  const elementWithText = this.page.getByText(text).first();
+  await expect(elementWithText).toBeVisible();
+});
+
 Then("I expect url to contain {string}", async function (urlPart: string) {
   await expect(this.page).toHaveURL(new RegExp(escapeRegExp(urlPart)));
 });
@@ -31,12 +36,12 @@ Then(/^I display the (Lot name|Favorites counter|Current bid) from the lot card 
     }
   });
 
-// TC-002: at least one result
+// TC-002: at least one result is displayed
 Then("I expect at least 1 lot to be displayed in search results", async function () {
   await expect(this.homePage.lotCards.first()).toBeVisible();
 });
 
-// TC-003: Catawiki no longer shows a "No exact results" banner — it always returns related objects.
+// TC-003: Catawiki will always show results regardless of search term.
 // Assert the object-amount heading is visible, confirming the search was processed without error.
 Then("I expect the no exact results message to be visible", async function () {
   await expect(this.page.locator('[data-testid="object-amount"]')).toBeVisible();
